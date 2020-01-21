@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ch14_6_5.html</title>
+<link rel="stylesheet" href="jquery.mobile.min.css">
+<script src="jquery.min.js"></script>
+<script src="jquery.mobile.min.js"></script>
+</head>
+<body>
+<div data-role="page" id="home">
+  <div data-role="header">
+  <h1>Mobile研討會</h1>
+  </div>
+  <div data-role="content">
+    <p>歡迎參加目前最佳的Mobile開發研討會!</p>
+    <p>Mobile開發是目前巿場的當紅潮流，
+    各種伺服端和客戶端網頁技術都逐漸向Mobile靠攏，
+    Mobile開發研討會告訴你最新的各種Mobile技術。</p>
+    <a href="#register">報名研討會</a><br/>
+    <a href="#speakers">講師陣容</a><br/>
+  </div>
+  <div data-role="footer" data-id="main" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#home" class="ui-btn-active ui-state-persist">首頁</a></li>
+        <li><a href="#register">報名研討會</a></li>
+        <li><a href="#speakers">講師陣容</a></li>
+      </ul>
+    </div> 
+  </div>
+</div>
+<div data-role="page" id="register" 
+     data-title ="Register">
+  <div data-role="header">
+  <h1>報名研討會</h1>
+  </div>
+  <div data-role="content">
+  <p>請輸入個人資料報名Mobile開發研討會!</p>
+  </div>
+  <div data-role="footer" data-id="main" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#home">首頁</a></li>
+        <li><a href="#register" class="ui-btn-active ui-state-persist">報名研討會</a></li>
+        <li><a href="#speakers">講師陣容</a></li>
+      </ul>
+    </div> 
+  </div>
+</div>
+<div data-role="page" id="speakers" 
+     data-title ="Speakers">
+  <div data-role="header">
+  <h1>講師陣容</h1>
+  </div>
+  <div data-role="content">
+    <p>我們有業界最強的講師陣容!</p>
+  </div>
+  <div data-role="footer" data-id="main" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#home">首頁</a></li>
+        <li><a href="#register">報名研討會</a></li>
+        <li><a href="#speakers" class="ui-btn-active ui-state-persist">講師陣容</a></li>
+      </ul>
+    </div> 
+  </div>
+</div>
+</body>
+</html>

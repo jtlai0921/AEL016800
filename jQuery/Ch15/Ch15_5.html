@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ch15_5.html</title>
+<link rel="stylesheet" href="jquery.mobile.min.css">
+<script src="jquery.min.js"></script>
+<script src="jquery.mobile.min.js"></script>
+<script>
+$(document).ready(function() {
+   $('#price').val(199);
+   $('a.cal').click(function() {
+      var price = $('#price').val();
+      var quantity = $('#quantity').val();
+      var amount;
+      // 選擇鈕
+      var discount = $('input[name=discount]:checked').val();
+      amount = (price * quantity) * discount / 100;  
+      // 核取方塊     
+      if ($('#ship').is(':checked')) {
+         amount = amount + 100;
+      }  
+      amount = amount.toFixed(2);  
+      alert("金額: " + amount);    
+      return false;
+   });
+});
+</script>
+</head>
+<body>
+<div data-role="page" id="home">
+  <div data-role="header">
+  <h1>Ch15_5</h1>
+  </div>
+  <div data-role="content">
+    <form id="form15_5">
+     <div data-role="fieldcontain">
+       <label for="quantity">數量:</label>
+       <input type="range" id="quantity" name="quantity"
+         value="5" min="1" max="20" step="1"/>
+     </div>
+     <div data-role="fieldcontain">
+       <label for="price">單價: </label>
+       <input type="text" id="price" name="price"/>
+     </div>
+     <div data-role="fieldcontain"> 
+       <label for="nine">9折</label> 
+       <input type="radio" name="discount" id="nine" value="90" checked="checked"/>
+       <label for="eight">8折</label> 
+       <input type="radio" name="discount" id="eight" value="80"/>       
+     </div> 
+     <div data-role="fieldcontain"> 
+       <label for="ship">外送</label> 
+       <input type="checkbox" id="ship" checked="checked"/>
+     </div>
+     <a href="#" class="cal" data-role="button">計算總價</a>     
+    </form>
+  </div>
+</div>
+</body>
+</html>

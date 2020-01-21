@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ch16_2_4.html</title>
+<link rel="stylesheet" href="jquery.mobile.min.css">
+<script src="jquery.min.js"></script>
+<script src="jquery.mobile.min.js"></script>
+<script>
+$(document).ready(function() {
+   $('a#btn1').click(function() {
+      $('#btn3').button();      
+   }); 
+   $('a#btn2').click(function() {
+      $('#accept').attr('checked','checked')
+       .checkboxradio('refresh'); 
+      $('#plus').removeAttr('checked')
+       .checkboxradio('refresh'); 
+      $('#subtract').removeAttr('checked')
+       .checkboxradio('refresh'); 
+      $('#multiply').attr('checked','checked')
+       .checkboxradio('refresh');          
+   });
+   $('a#btn3').click(function() {
+      // 建立<li>
+      $('<li>').attr('data-role', "list-divider") 
+       .append('<a>')    // 新增之下的<a> 
+       .attr('href', '#client') 
+       .attr('data-transition', 'slide') 
+       .html('客戶端技術').appendTo($('ul')); 
+      $('<li/>').html('JavaScript').appendTo($('ul'));
+      $('<li/>').html('jQuery').appendTo($('ul')); 
+      $('ul').listview('refresh'); 
+   });     
+});
+</script>
+</head>
+<body>
+<div data-role="page" id="home">
+  <div data-role="header">
+  <h1>Ch16_2_4</h1>
+  </div>
+  <div data-role="content">
+    <p><a id="btn1" data-role="button">改成按鈕</a>
+    <a id="btn2" data-role="button">勾選選項</a></p>
+    <div data-role="fieldcontain">
+       <label for="accept">我同意授權</label>
+       <input type="checkbox" name="accept" id="accept" 
+           value="yes"/>
+    </div>
+    <div data-role="fieldcontain">
+       <fieldset data-role="controlgroup" 
+             data-type="horizontal">
+         <legend>運算子: </legend>
+         <label for="plus">+</label>
+         <input type="radio" name="op" id="plus"/>
+         <label for="subtract">-</label>
+         <input type="radio" name="op" id="subtract"/>
+         <label for="multiply">*</label>
+         <input type="radio" name="op" id="multiply"/>
+       </fieldset>
+    </div>
+    <p><a id="btn3">新增ListView選項</a></p>
+    <ul data-role="listview" data-inset="true">
+    </ul>      
+  </div>     
+</div>
+</body>
+</html>

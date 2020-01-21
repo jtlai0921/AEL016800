@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ch15_2_3.html</title>
+<link rel="stylesheet" href="jquery.mobile.min.css">
+<script src="jquery.min.js"></script>
+<script src="jquery.mobile.min.js"></script>
+</head>
+<body>
+<div data-role="page" id="schedule">
+  <div data-role="header">
+  <h1>課程時刻表</h1>
+  </div>
+  <div data-role="content">
+    <ul data-role="listview">
+       <li>
+          <img src="icon.jpg" class="ui-li-icon">
+          <h3>jQuery函數庫</h3>
+          <p>9:00 AM - 9:30 AM(講師 B)</p>
+          <p>jQuery函數庫的實戰技巧.</p>
+       </li>
+       <li>
+          <img src="icon.jpg" class="ui-li-icon">
+          <h3>jQuery Mobile框架</h3>
+          <p>10:00 AM - 10:55 AM(講師 C)</p>
+          <p>jQuery Mobile的實戰技巧.</p>
+       </li>
+       <li>
+          <img src="icon.jpg" class="ui-li-icon">
+          <h3>PHP Mobile支援</h3>
+          <p>11:00 AM - 12:00 AM(講師 A)</p>
+          <p>最新PHP的Mobile支援.</p>
+       </li>
+       <li>
+          <img src="icon.jpg" class="ui-li-icon">
+          <h3>午餐</h3>
+          <p>12:00 PM - 1:30 PM</p>
+          <p>午餐請自理.</p>
+       </li>
+    </ul>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <a href="#speakers">講師陣容</a>
+  </div>
+</div>
+<div data-role="page" id="speakers">
+  <div data-role="header">
+  <h1>講師陣容</h1>
+  </div>
+  <div data-role="content">
+    <ul data-role="listview">
+       <li>
+          <img src="speakerA.jpg">
+          <h3>講師 A</h3>
+          <p>講師 A的經歷與專長</p>
+       </li>
+       <li>
+       <img src="speakerB.jpg">
+          <h3>講師 B</h3>
+          <p>講師 B的經歷與專長</p>
+       </li>
+       <li>
+       <img src="speakerC.jpg">
+          <h3>講師 C</h3>
+          <p>講師 C的經歷與專長</p>
+       </li>
+       <li>
+       <img src="speakerD.jpg">
+          <h3>講師 D</h3>
+          <p>講師 D的經歷與專長</p>
+       </li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

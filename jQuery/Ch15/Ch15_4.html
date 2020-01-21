@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ch15_4.html</title>
+<link rel="stylesheet" href="jquery.mobile.min.css">
+<script src="jquery.min.js"></script>
+<script src="jquery.mobile.min.js"></script>
+<script>
+$(document).ready(function () {
+    $('#price').val(199);
+    $('a.cal').click(function () {
+        // 密碼和多行文字方塊
+        var pass = $('#pass').val();
+        var comments = $('#comments').val();
+        $('#msg').html(pass + "/" + comments);
+        // 文字方塊和滑動軸
+        var price = $('#price').val();
+        var quantity = $('#quantity').val();
+        var amount = price * quantity;
+        amount = amount.toFixed(2);
+        $('#result').html("金額: " + amount);
+        return false;
+    });
+});
+</script>
+</head>
+<body>
+<div data-role="page" id="home">
+  <div data-role="header">
+  <h1>Ch15_4</h1>
+  </div>
+  <div data-role="content">
+    <form id="form15_4">
+     <div data-role="fieldcontain">
+       <label for="pass">密碼: </label>
+       <input type="password" name="pass" id="pass"
+              data-mini="true"/>
+     </div>
+     <div data-role="fieldcontain">
+       <label for="comments">回應: </label>
+       <textarea name="comments" id="comments">
+       </textarea>
+     </div>
+     <div data-role="fieldcontain">
+       <label for="quantity">數量:</label>
+       <input type="range" id="quantity" name="quantity"
+         value="5" min="1" max="20" step="1"
+         data-mini="true"/>
+     </div>
+     <div data-role="fieldcontain">
+       <label for="price">單價: </label>
+       <input type="text" id="price" name="price"/>
+     </div>     
+     <a href="#" class="cal" data-role="button">計算總價</a>     
+    </form>
+    <div id="msg"></div>
+    <div id="result"></div>
+  </div>
+</div>
+</body>
+</html>

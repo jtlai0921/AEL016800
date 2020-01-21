@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ch16_2_1.html</title>
+<link rel="stylesheet" href="jquery.mobile.min.css">
+<script src="jquery.min.js"></script>
+<script src="jquery.mobile.min.js"></script>
+<script>
+$(document).ready(function() {
+   $('#price').val(199);
+   $('a.cal').click(function() {
+      var price = $('#price').val();
+      var quantity = $('#quantity').val();
+      var amount = price * quantity;
+      $('#output').html("總金額: " + amount); 
+      $.mobile.changePage($('#result'));   
+      return false;
+   });
+});
+</script>
+</head>
+<body>
+<div data-role="page" id="home">
+  <div data-role="header">
+  <h1>Ch16_2_1</h1>
+  </div>
+  <div data-role="content">
+    <form id="form16_2_1">
+     <div data-role="fieldcontain">
+       <label for="quantity">數量:</label>
+       <input type="range" id="quantity" data-mini="true"
+         value="5" min="1" max="20" step="1"/>
+     </div>
+     <div data-role="fieldcontain">
+       <label for="price">單價: </label>
+       <input type="text" id="price"/>
+     </div>     
+     <a href="#" class="cal" data-role="button">計算</a>     
+    </form>
+  </div>
+</div>
+<div data-role="page" id="result">
+  <div data-role="header">
+  <h1>計算結果</h1>
+  </div>
+  <div data-role="content">
+    <div id="output"></div>
+    <p><a href="#home" data-role="button">回上一頁</a></p>    
+  </div>  
+</div>
+</body>
+</html>
